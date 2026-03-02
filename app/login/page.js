@@ -1,4 +1,4 @@
-import EnhancedLogin from '../components/EnhancedLogin';
+import EnhancedLogin from "../components/EnhancedLogin";
 
 export default function LoginPage() {
   return <EnhancedLogin />;

@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { CLASS_GROUPS, RESOURCE_LINKS } from "./classData";
 
-export default function DrivingClassesPage() {
+function DrivingClassesContent() {
   const searchParams = useSearchParams();
   const cat = searchParams.get("cat") || "a";
   const data = CLASS_GROUPS[cat] || CLASS_GROUPS.a;
@@ -140,5 +141,19 @@ export default function DrivingClassesPage() {
         </section>
       </div>
     </div>
+  );
+}
+
+export default function DrivingClassesPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-white text-sm text-gray-700 dark:bg-gray-950 dark:text-gray-200">
+          Loading driving classes...
+        </div>
+      }
+    >
+      <DrivingClassesContent />
+    </Suspense>
   );
 }
