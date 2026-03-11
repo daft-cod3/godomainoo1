@@ -69,7 +69,6 @@ export default function VehiclePartsPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-
         <header className="mb-12 sm:mb-16 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             {t('vehiclePartsSymbols','Vehicle Parts & Dashboard Symbols')}
@@ -172,57 +171,33 @@ export default function VehiclePartsPage() {
         <section className="mb-12 sm:mb-16">
           <div className="backdrop-blur-sm bg-gray-900/80 rounded-2xl border border-gray-800 p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-3">
-              3D Vehicle Model
+              3D Mercedes Model
             </h2>
             <p className="text-sm sm:text-base text-gray-400 mb-6">
-              Explore a full interactive 3D vehicle model.
+              View and inspect the Mercedes-Benz GLS 580 in 3D.
             </p>
 
             <div className="rounded-xl overflow-hidden border border-gray-700 bg-black">
-              <div className="sketchfab-embed-wrapper">
-                <iframe
-                  title="PUBG: New Dacia (Official)"
-                  className="w-full h-[300px] sm:h-[420px] lg:h-[520px]"
-                  frameBorder="0"
-                  allowFullScreen
-                  mozallowfullscreen="true"
-                  webkitallowfullscreen="true"
-                  allow="autoplay; fullscreen; xr-spatial-tracking"
-                  xr-spatial-tracking="true"
-                  execution-while-out-of-viewport="true"
-                  execution-while-not-rendered="true"
-                  web-share="true"
-                  src="https://sketchfab.com/models/b6213f11c2d94ab487ca984e0e67cd66/embed"
-                />
-                <p className="text-xs sm:text-sm font-normal m-3 text-gray-400">
-                  <a
-                    href="https://sketchfab.com/3d-models/pubg-new-dacia-official-b6213f11c2d94ab487ca984e0e67cd66?utm_medium=embed&utm_campaign=share-popup&utm_content=b6213f11c2d94ab487ca984e0e67cd66"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                    className="font-bold text-cyan-400 hover:underline"
-                  >
-                    PUBG: New Dacia (Official)
-                  </a>{' '}
-                  by{' '}
-                  <a
-                    href="https://sketchfab.com/lionsharp?utm_medium=embed&utm_campaign=share-popup&utm_content=b6213f11c2d94ab487ca984e0e67cd66"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                    className="font-bold text-cyan-400 hover:underline"
-                  >
-                    Lionsharp Studios
-                  </a>{' '}
-                  on{' '}
-                  <a
-                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=b6213f11c2d94ab487ca984e0e67cd66"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                    className="font-bold text-cyan-400 hover:underline"
-                  >
-                    Sketchfab
-                  </a>
-                </p>
-              </div>
+              <iframe
+                src="/theory-notes/mercedes-viewer.html"
+                title="Mercedes-Benz GLS 580 3D model"
+                loading="lazy"
+                className="w-full h-[320px] sm:h-[460px] lg:h-[560px]"
+              />
+            </div>
+
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href="/theory-notes/mercedes-viewer.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-cyan-700"
+              >
+                Open Full Viewer
+              </a>
+              <p className="text-xs sm:text-sm text-gray-400 self-center">
+                Drag to rotate and scroll to zoom.
+              </p>
             </div>
           </div>
         </section>

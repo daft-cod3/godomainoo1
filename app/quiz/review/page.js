@@ -5,24 +5,26 @@ import Link from 'next/link';
 
 export default function ReviewHomePage() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-black py-16 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Review Answered Quizzes
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Select a quiz to review the questions and correct answers.
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Select a quiz to review the questions and correct answers
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {quizzes.map((quiz) => (
-            <div key={quiz.href} className="bg-gray-900 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4 text-white">{quiz.name}</h3>
-              <div className="grid grid-cols-2 gap-2">
+            <div key={quiz.href} className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4">
+                <h3 className="text-lg font-bold text-white">{quiz.name}</h3>
+              </div>
+              <div className="p-4 grid grid-cols-2 gap-3">
                 {quiz.subQuizzes.map((subQuiz) => (
-                  <Link key={subQuiz.id} href={`/quiz/review/${quiz.href.split('/').pop()}-${subQuiz.id}`} className="bg-blue-600 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                  <Link key={subQuiz.id} href={`/quiz/review/${quiz.href.split('/').pop()}-${subQuiz.id}`} className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white text-center font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                     {subQuiz.name}
                   </Link>
                 ))}

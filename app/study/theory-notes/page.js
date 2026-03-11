@@ -345,6 +345,41 @@ export default function TheoryNotesPage() {
     <main className="min-h-screen bg-gray-50 py-8 text-gray-900 dark:bg-black dark:text-white sm:py-12">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-8">
         <section className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+          <div className="grid gap-0 lg:grid-cols-[1.05fr_1.15fr]">
+            <div className="p-6 sm:p-8 lg:p-10">
+              <p className="mb-3 inline-flex rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-700 dark:text-indigo-300">
+                Interactive 3D Study
+              </p>
+              <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">
+                Mercedes-Benz GLS 580: 3D Familiarization Model
+              </h2>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 dark:text-gray-300 sm:text-base">
+                Rotate, zoom, and inspect this model before practical lessons.
+                Use it to identify exterior profile, body orientation, and
+                vehicle posture from multiple angles.
+              </p>
+              <a
+                href="/theory-notes/mercedes-viewer.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
+              >
+                Open Full 3D View
+              </a>
+            </div>
+
+            <div className="min-h-[320px] border-t border-gray-200 lg:min-h-full lg:border-l lg:border-t-0 dark:border-gray-800">
+              <iframe
+                src="/theory-notes/mercedes-viewer.html"
+                title="Interactive 3D Mercedes model"
+                loading="lazy"
+                className="h-[360px] w-full lg:h-full"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
           <div className="grid gap-0 lg:grid-cols-2">
             <div className="p-6 sm:p-8 lg:p-10">
               <p className="mb-3 inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700 dark:text-green-300">
